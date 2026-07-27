@@ -53,5 +53,10 @@ if(80 <= num and num <= 100):
     
 elif(70 <= num and num <= 79):
     print("Grade: B")
-elif(num <= 70):
+elif(60 <=num and num <= 69):
+    print("Grade: C")
+elif(50 <= num and num <= 59):
+    print("Grade: D")
+elif(num <= 50):
     print("Grade: F")
+    
