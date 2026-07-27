@@ -45,7 +45,7 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
-num=int(input("Enter student score: "))
+num=float(input("Enter student score: "))
 
 
 if(80 <= num and num <= 100):
