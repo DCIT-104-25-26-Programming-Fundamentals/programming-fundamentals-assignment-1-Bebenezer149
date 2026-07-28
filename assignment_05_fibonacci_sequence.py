@@ -49,3 +49,25 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def main():
+    terms=int(input("How many terms ? "))
+    
+    def fibonacci():
+        sequence = [0,1]
+       
+        
+        for i in range(1,terms):
+            start= sequence[i]+sequence[i-1]
+            sequence.append(start)
+        
+        return sequence
+    result=fibonacci()
+    print(f"The Fibonacci sequence are {result}")
+    value=int(input("Enter a number to check: "))
+    if value in result:
+        print(f"{value} is a Fibonacci number")
+    else:
+        print(f"{value} is not a Fibonacci number")
+        
+main()
+            
