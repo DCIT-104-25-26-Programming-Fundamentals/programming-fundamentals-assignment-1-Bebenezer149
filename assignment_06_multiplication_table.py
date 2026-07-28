@@ -55,3 +55,22 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+
+def main():
+    # ------------------------ Part A --------------------------------------------
+
+    N=int(input("Enter number to multiply: "))
+    
+    for i in range(1,13):
+        result=N*i
+        print(f"{N} x {i} = {result}\n")
+        
+    print("----Part B-----")   
+    n=int(input("Enter a number to find tables: "))
+    
+    for x in range(1,n+1):
+        for z in range(1,12):
+             answer=x*z
+             print(f"{x} x {z} = {answer}\n")
+        print("\n")
+main()
