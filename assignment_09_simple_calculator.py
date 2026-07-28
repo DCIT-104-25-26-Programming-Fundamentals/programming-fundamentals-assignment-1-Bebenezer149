@@ -68,3 +68,106 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def add(a, b):
+    """Return the sum of a and b."""
+    return a + b
+
+
+def subtract(a, b):
+    """Return the difference of a and b."""
+    return a - b
+
+
+def multiply(a, b):
+    """Return the product of a and b."""
+    return a * b
+
+
+def divide(a, b):
+    """Return the quotient of a divided by b, rounded to 2 decimal places.
+    Returns None if b is zero."""
+    if b == 0:
+        return None
+    return round(a / b, 2)
+
+
+def modulus(a, b):
+    """Return the remainder of a divided by b."""
+    return a % b
+
+
+def exponentiate(a, b):
+    """Return a raised to the power of b."""
+    return a ** b
+
+
+def display_menu():
+    """Display the calculator menu."""
+    print("\n============================")
+    print("     SIMPLE CALCULATOR")
+    print("============================")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Modulus")
+    print("6. Exponentiation")
+    print("7. Quit")
+
+
+def get_numbers():
+    """Prompt the user to enter two numbers and return them as floats."""
+    a = float(input("Enter first number : "))
+    b = float(input("Enter second number: "))
+    return a, b
+
+
+def main():
+    """Run the calculator program in a loop until the user quits."""
+    while True:
+        display_menu()
+        choice = input("Select an operation (1-7): ")
+
+        if choice == "1":
+            a, b = get_numbers()
+            result = add(a, b)
+            print(f"Result: {a} + {b} = {result}")
+
+        elif choice == "2":
+            a, b = get_numbers()
+            result = subtract(a, b)
+            print(f"Result: {a} - {b} = {result}")
+
+        elif choice == "3":
+            a, b = get_numbers()
+            result = multiply(a, b)
+            print(f"Result: {a} * {b} = {result}")
+
+        elif choice == "4":
+            a, b = get_numbers()
+            result = divide(a, b)
+            if result is None:
+                print("Error: Cannot divide by zero.")
+            else:
+                print(f"Result: {a} / {b} = {result}")
+
+        elif choice == "5":
+            a, b = get_numbers()
+            result = modulus(a, b)
+            print(f"Result: {a} % {b} = {result}")
+
+        elif choice == "6":
+            a, b = get_numbers()
+            result = exponentiate(a, b)
+            print(f"Result: {a} ** {b} = {result}")
+
+        elif choice == "7":
+            print("Goodbye!")
+            break
+
+        else:
+            print("Invalid choice. Please select a number between 1 and 7.")
+
+
+if __name__ == "__main__":
+    main()
