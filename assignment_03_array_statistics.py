@@ -38,4 +38,46 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
+def main(): 
+    store=[]
+    numbers=int(input("Enter a number? "))
+    for i in range(numbers):
+        num=float(input("Enter a number: "))
+        store.append(num)
+    
+    def sum():
+        add=0
+        for i in store:
+            
+             add= add + i
+    
+        return add
+         
+        
+    def max():
+        largest_num=store[0]
+        for numbers in store:
+            if numbers > largest_num:
+                largest_num=numbers
+        return largest_num
 
+    def min():
+       
+        smallest_num=store[0]
+        for numbers in store:
+            if numbers < smallest_num:
+                smallest_num=numbers
+        return smallest_num
+    
+    sum=sum()
+    
+    def average():
+        return sum/numbers
+    
+    print (f"Sum : {sum}\n")
+    print (f"Max : {max()}\n")
+    print (f"Min : {min()}\n")
+    print (f"Average : {average()}")
+    
+        
+main()
